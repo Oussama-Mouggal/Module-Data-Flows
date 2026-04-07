@@ -41,7 +41,9 @@ function submit() {
     !Number.isInteger(pagesCount) ||
     pagesCount <= 0
   ) {
-    alert("Please fill all fields!");
+    alert(
+      "Please fill all fields correctly. Title and author are required, and page count must be a positive whole number."
+    );
     return false;
   } else {
     let book = new Book(
