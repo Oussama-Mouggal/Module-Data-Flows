@@ -90,13 +90,7 @@ function render() {
     let toggleReadButton = document.createElement("button");
     toggleReadButton.className = "btn btn-success";
     wasReadCell.appendChild(toggleReadButton);
-    let readStatus = "";
-    if (myLibrary[i].check === false) {
-      readStatus = "No";
-    } else {
-      readStatus = "Yes";
-    }
-    toggleReadButton.textContent = readStatus;
+    toggleReadButton.textContent = myLibrary[i].check === false ? "No" : "Yes";
 
     toggleReadButton.addEventListener("click", function () {
       myLibrary[i].check = !myLibrary[i].check;
